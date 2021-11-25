@@ -1,6 +1,6 @@
 package pl.czaplicki.jedynka.cast.formats.pdf
 
-import android.app.Activity
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.ParcelFileDescriptor
@@ -141,6 +141,10 @@ class PDFActivity: FragmentActivity() {
         parcelFileDescriptor?.close()
         pdfAdapter?.clear()
 
+    }
+
+    override fun onBackPressed() {
+        finishAndRemoveTask()
     }
 
 }
